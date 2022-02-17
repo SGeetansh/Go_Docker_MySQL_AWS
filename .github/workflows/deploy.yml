@@ -28,7 +28,7 @@ jobs:
         ECR_REPOSITORY: go-docker-mysql-aws
         IMAGE_TAG: ${{ github.sha }}
       run: |
-        docker-compose build
+        docker-compose up
         echo "Build done"
-        docker-compose push
-        echo "Pushed"
+        docker-compose push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+        echo "Pushing"
