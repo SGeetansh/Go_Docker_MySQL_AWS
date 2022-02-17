@@ -30,5 +30,6 @@ jobs:
       run: |
         docker-compose build
         echo "Build done"
-        docker-compose push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+        echo $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
         echo "Pushing"
