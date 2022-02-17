@@ -16,7 +16,7 @@ type User struct {
 }
 
 func getUsers() []*User {
-	db, err := sql.Open("mysql", "root:Geetansh@9999@/test")
+	db, err := sql.Open("mysql", "tester:secret@tcp(db:3306)/test")
 
 	if err != nil {
 		log.Print(err.Error())
