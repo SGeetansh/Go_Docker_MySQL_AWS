@@ -4,7 +4,6 @@ services:
   db:
     container_name: "test_db"
     build:
-      image: 
       context: .
       dockerfile: db.Dockerfile
     networks:
